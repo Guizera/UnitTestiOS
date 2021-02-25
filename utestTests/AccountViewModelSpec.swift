@@ -56,6 +56,12 @@ class AccounViewModelSpec: QuickSpec {
                     
                 }
             }
+            context("AccountViewModelProtocol") {
+                it("verify AccountViewModelProtocol") {
+                    sut = AccountViewModel(shouldUseLocation: false)
+                    expect(sut).to(beAKindOf(AccountViewModelProtocol.self))
+                }
+            }
         }
     }
 }
