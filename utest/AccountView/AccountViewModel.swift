@@ -13,18 +13,35 @@ protocol AccountViewModelProtocol {
                                askUserPermission: () -> (),
                                completion: () -> ())
     
+    var instructionText: String { get }
+    
 }
 
-class AccountViewModel: AccountViewModelProtocol {
+class AccountViewModel {
     
     private let shouldUseLocation: Bool
-    init(shouldUseLocation: Bool) {
+    private let model: AccountModel
+    
+    init(shouldUseLocation: Bool, model: AccountModel) {
         self.shouldUseLocation = shouldUseLocation
+        self.model = model
+    }
+}
+
+extension AccountViewModel: AccountViewModelProtocol {
+    
+    
+    var instructionText: String {
+        if shouldUseLocation {
+            return model.instruction + " com localizaçao"
+        }
+        return model.instruction
     }
     
     func loginButtonTapped() {
         print("login realizado com sucesso")
     }
+    
     func shouldRequestLocation(showAlert:() -> (),
                                askUserPermission: () -> (),
                                completion: () -> ()) {

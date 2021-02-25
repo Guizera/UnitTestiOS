@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         let accountViewController = AccountViewController(nibName: "AccountViewController", bundle: nil)
-        accountViewController.viewModel = AccountViewModel(shouldUseLocation: true)
+        accountViewController.viewModel = AccountViewModel(shouldUseLocation: true, model: AccountModel(instruction: ""))
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = scene
