@@ -29,6 +29,9 @@
 		3F2881A025E831FE00DB2183 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F28819F25E831FE00DB2183 /* AccountModel.swift */; };
 		3F2881A525E83A6B00DB2183 /* AsyncProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2881A425E83A6B00DB2183 /* AsyncProcess.swift */; };
 		3F2881A925E83B1C00DB2183 /* AsyncProcessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2881A825E83B1C00DB2183 /* AsyncProcessSpec.swift */; };
+		3F2881AD25E83D7700DB2183 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2881AC25E83D7700DB2183 /* Provider.swift */; };
+		3F2881B125E83F4C00DB2183 /* ProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2881B025E83F4C00DB2183 /* ProviderSpec.swift */; };
+		3F2881B525E83FF500DB2183 /* ProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2881B425E83FF500DB2183 /* ProviderMock.swift */; };
 		7F057FE2DCA5B66972B7CCC0 /* Pods_utestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330B6A86169A880E6C8ECC95 /* Pods_utestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		3F28819F25E831FE00DB2183 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		3F2881A425E83A6B00DB2183 /* AsyncProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProcess.swift; sourceTree = "<group>"; };
 		3F2881A825E83B1C00DB2183 /* AsyncProcessSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProcessSpec.swift; sourceTree = "<group>"; };
+		3F2881AC25E83D7700DB2183 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		3F2881B025E83F4C00DB2183 /* ProviderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSpec.swift; sourceTree = "<group>"; };
+		3F2881B425E83FF500DB2183 /* ProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMock.swift; sourceTree = "<group>"; };
 		796D07D9A112CF706DE98CFE /* Pods-utestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-utestTests.debug.xcconfig"; path = "Target Support Files/Pods-utestTests/Pods-utestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		933210C4AB2038AE989A0E20 /* Pods-utest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-utest.debug.xcconfig"; path = "Target Support Files/Pods-utest/Pods-utest.debug.xcconfig"; sourceTree = "<group>"; };
 		97744859C5C5E77D9A40FE73 /* Pods_utest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_utest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +160,8 @@
 				3F28819125E7DA0E00DB2183 /* AccountViewModelSpec.swift */,
 				3F28819B25E8235700DB2183 /* AccountViewControllerSpec.swift */,
 				3F2881A825E83B1C00DB2183 /* AsyncProcessSpec.swift */,
+				3F2881B025E83F4C00DB2183 /* ProviderSpec.swift */,
+				3F2881B425E83FF500DB2183 /* ProviderMock.swift */,
 				3F28815625E71E5700DB2183 /* Info.plist */,
 			);
 			path = utestTests;
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				3F2881A425E83A6B00DB2183 /* AsyncProcess.swift */,
+				3F2881AC25E83D7700DB2183 /* Provider.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -364,6 +373,7 @@
 				3F28818D25E7D79200DB2183 /* AccountViewController.swift in Sources */,
 				3F28813E25E71E4200DB2183 /* ViewController.swift in Sources */,
 				3F28813A25E71E4200DB2183 /* AppDelegate.swift in Sources */,
+				3F2881AD25E83D7700DB2183 /* Provider.swift in Sources */,
 				3F28813C25E71E4200DB2183 /* SceneDelegate.swift in Sources */,
 				3F28817725E7CB5900DB2183 /* StringsUtil.swift in Sources */,
 				3F28816925E7C62E00DB2183 /* AccountBalance.swift in Sources */,
@@ -377,6 +387,8 @@
 				3F28816325E7211700DB2183 /* StringUtilsTests.swift in Sources */,
 				3F28819C25E8235700DB2183 /* AccountViewControllerSpec.swift in Sources */,
 				3F28815525E71E5700DB2183 /* utestTests.swift in Sources */,
+				3F2881B525E83FF500DB2183 /* ProviderMock.swift in Sources */,
+				3F2881B125E83F4C00DB2183 /* ProviderSpec.swift in Sources */,
 				3F28816D25E7C6CA00DB2183 /* AccountBalanceTest.swift in Sources */,
 				3F28819225E7DA0E00DB2183 /* AccountViewModelSpec.swift in Sources */,
 				3F28818125E7CBCD00DB2183 /* StringUtilsSpec.swift in Sources */,

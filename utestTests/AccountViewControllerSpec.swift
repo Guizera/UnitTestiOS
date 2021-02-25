@@ -10,6 +10,8 @@ import Nimble
 @testable import utest
 
 class AccountViewModelMock: AccountViewModelProtocol {
+    var status = ""
+    
     var instructionText: String { return "" }
     
     var loginButtonHasBeenCalled = false

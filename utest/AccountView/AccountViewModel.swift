@@ -14,6 +14,7 @@ protocol AccountViewModelProtocol {
                                completion: () -> ())
     
     var instructionText: String { get }
+    var status: String { get set }
     
 }
 
@@ -21,15 +22,29 @@ class AccountViewModel {
     
     private let shouldUseLocation: Bool
     private let model: AccountModel
+    private let provider: ProviderProtocol
     
-    init(shouldUseLocation: Bool, model: AccountModel) {
+    var status: String
+    
+    init(shouldUseLocation: Bool, model: AccountModel, provider: ProviderProtocol = Provider()) {
         self.shouldUseLocation = shouldUseLocation
         self.model = model
+        self.provider = provider
+        self.status = ""
+    }
+    func getData() {
+        provider.getData { (result, error) in
+            if error != nil {
+                self.status = "Error"
+                return
+            }
+            self.status = result![0]
+        }
     }
 }
 
 extension AccountViewModel: AccountViewModelProtocol {
-    
+
     
     var instructionText: String {
         if shouldUseLocation {

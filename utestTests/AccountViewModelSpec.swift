@@ -71,7 +71,19 @@ class AccounViewModelSpec: QuickSpec {
                     sut = AccountViewModel(shouldUseLocation: false, model: AccountModel(instruction: "Esta certo"))
                     expect(sut.instructionText).to(equal("Esta certo"))
                 }
-                
+            }
+            context("get Data") {
+                it("with error") {
+                    sut = AccountViewModel(shouldUseLocation: true, model: AccountModel(instruction: "Esta certo"), provider: ProviderMock(status: .invalidResponse))
+                    sut.getData()
+                    expect(sut.status).to(equal("Error"))
+                }
+                it("without error") {
+                    sut = AccountViewModel(shouldUseLocation: true, model: AccountModel(instruction: "Esta certo"), provider: ProviderMock(status: .success))
+                    sut.getData()
+                    expect(sut.status).to(equal("animal"))
+                }
+
             }
         }
     }
